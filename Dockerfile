@@ -27,6 +27,6 @@ RUN echo $'\nSetEnv SIMPLESAMLPHP_CONFIG_DIR /var/simplesamlphp/config\nAlias /s
 
 COPY httpd-foreground /usr/local/bin/
 
-EXPOSE 80 443
+EXPOSE 443
 
 CMD ["httpd-foreground"]
