@@ -3,11 +3,11 @@ FROM centos:centos7
 LABEL maintainer="Unicon, Inc."
 
 RUN yum -y install epel-release \
-    && yum -y install http://rpms.remirepo.net/enterprise/remi-release-7.rpm \
+    && yum -y install https://rpms.remirepo.net/enterprise/remi-release-7.rpm \
     && yum -y update \
     && yum-config-manager --enable remi-php72 \
     && yum -y install httpd mod_ssl wget \
-    && yum -y install php php-ldap php-mbstring php-memcache php-mcrypt php-pdo php-pear php-xml \
+    && yum -y install php php-ldap php-mbstring php-memcache php-mcrypt php-pdo php-pear php-xml php-mysql \
     && yum -y clean all
 
 RUN ssp_version=1.19.3; \
