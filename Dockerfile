@@ -2,8 +2,11 @@ FROM ubuntu:21.10
 
 LABEL maintainer="kiss7001@nate.com"
 
-RUN apt update
-RUN apt install -y nginx
+RUN apt-get update
+RUN apt-get -y install tzdata
+RUN apt-get -y install nginx
+RUN echo "Dockerfile Test on Apache2" > /var/www/html/index.html
+
 
 EXPOSE 80
 
